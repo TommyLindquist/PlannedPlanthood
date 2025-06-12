@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Planned Planthood</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="En sida om växter">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <main>
+        <header>
+            <nav class="top-navigation">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="images/logo.svg" alt="Planned Planthood Logo" width="50" height="50">
+                            Planned Planthood
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            HEM
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            HISTORIK
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            TIPS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            KONTAKT
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article>
+            <header>
+                <h2>Upskattade växter</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Similique,corporis ipsum.</p>
+            </header>
+
+            <ul class="prized-plants-gallery" role="list">
+                <li class="gallery-item">
+                    <img src="images/bild1.png" alt="Planned Planthood Logo">
+                </li>
+                <li class="gallery-item">
+                    <img src="images/bild2.png" alt="Planned Planthood Logo">
+                </li>
+                <li class="gallery-item">
+                    <img src="images/bild3.png" alt="Planned Planthood Logo">
+                </li>
+                <li class="gallery-item">
+                    <img src="images/bild4.png" alt="Planned Planthood Logo">
+                </li>
+                <li class="gallery-item">
+                    <img src="images/bild5.png" alt="Planned Planthood Logo">
+                </li>
+                <li class="gallery-item">
+                    <img src="images/bild6.png" alt="Planned Planthood Logo">
+                </li>
+
+            </ul>
+
+        </article>
+        <!-- Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
+        <img src="images/icon-planting.svg" alt="email Ikon" width="80" height="80" class="circle">
+        -->
+        <section class="newsletter">
+            <input type="email" placeholder="email@domain.com">
+            <button type="submit">Skicka</button>
+        </section>
+        <aside>
+            <ul class="cards" role="list">
+                <!-- It appears we cannot use article inside a li element when flexing
+                so this is a workaround by setting role to li class directly
+                and skip article element altogether ... -->
+                <li class="card" role="article">
+                    <img src="images/card1.png" alt="Planting Icon">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--flower">BLOMMOR</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                    </section>
+
+                    <h3>Gurka</h3>
+                    <p>
+                        Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,bara man är noga med
+                        vattning,
+                        omplacering, duschning och gödsling.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar1.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Coolio</p>
+                            <p>2024-04-01</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card2.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
+                        <em class="card__badge card__badge--easy">LÄTTODLAT</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                    </section>
+
+                    <h3>Tomat</h3>
+                    <p>
+                        En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under
+                        sommaren.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar2.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Anna Odlare</p>
+                            <p>2024-12-05</p>
+                        </section>
+                    </footer>
+                </li>
+
+                <li class="card" role="article">
+                    <img src="images/card3.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--decorative">dekorativ</em>
+                        <em class="card__badge card__badge--colorful">färgstark</em>
+                        <em class="card__badge card__badge--robust">tålig</em>
+                        <em class="card__badge card__badge--flower">BLOMMOR</em>
+                    </section>
+
+                    <h3>Pelargon</h3>
+                    <p>
+                        En vacker och lättskött blomma som trivs både inne och ute under sommaren.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar3.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Blomsterkalle</p>
+                            <p>2024-12-03</p>
+                        </section>
+                    </footer>
+
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card4.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge">kryddor</em>
+                        <em class="card__badge card__badge--fragrant">doftande</em>
+                        <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
+                    </section>
+
+                    <h3>Basilika</h3>
+                    <p>
+                        En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar4.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Krydd-Malin</p>
+                            <p>2024-12-07</p>
+                        </section>
+                    </footer>
+                </li>
+
+                <li class="card" role="article">
+                    <img src="images/card5.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--fast">Snabbväxande</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                    </section>
+
+                    <h3>Sallad</h3>
+                    <p>
+                        Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska
+                        måltider.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar5.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Grönis</p>
+                            <p>2024-12-06</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card6.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--air">Luftfuktande</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                        <em class="card__badge card__badge--decorative">dekorativ</em>
+                    </section>
+
+                    <h3>Ormbunke</h3>
+                    <p>
+                        En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar6.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Naturvännen</p>
+                            <p>2024-12-08</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card7.png" alt="Planting Icon" width="180">
+
+                    <section class="badges">
+                        <em class="card__badge card__badge--flower">BLOMMOR</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                    </section>
+
+                    <h3>Gurka</h3>
+                    <p>
+                        Gurka växer snabbt, är enkel att odla och ger mängder med gurkor,bara man är noga med
+                        vattning,
+                        omplacering, duschning och gödsling.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar7.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Coolio</p>
+                            <p>2024-04-01</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card8.png" alt="Planting Icon" width="180">
+                    <section class="badges">
+                        <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
+                        <em class="card__badge card__badge--easy">LÄTTODLAT</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                    </section>
+                    <h3>Tomat</h3>
+                    <p>
+                        En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under
+                        sommaren.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar8.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Anna Odlare</p>
+                            <p>2024-12-05</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card9.png" alt="Planting Icon" width="180">
+                    <section class="badges">
+                        <em class="card__badge card__badge--decorative">dekorativ</em>
+                        <em class="card__badge card__badge--colorful">färgstark</em>
+                        <em class="card__badge card__badge--robust">tålig</em>
+                        <em class="card__badge card__badge--flower">BLOMMOR</em>
+                    </section>
+                    <h3>Pelargon</h3>
+                    <p>
+                        En vacker och lättskött blomma som trivs både inne och ute under sommaren.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar9.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Blomsterkalle</p>
+                            <p>2024-12-03</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card10.png" alt="Planting Icon" width="180">
+                    <section class="badges">
+                        <em class="card__badge">kryddor</em>
+                        <em class="card__badge card__badge--fragrant">doftande</em>
+                        <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
+                    </section>
+                    <h3>Basilika</h3>
+                    <p>
+                        En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar10.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Krydd-Malin</p>
+                            <p>2024-12-07</p>
+                        </section>
+                    </footer>
+
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card11.png" alt="Planting Icon" width="180">
+                    <section class="badges">
+                        <em class="card__badge card__badge--fast">Snabbväxande</em>
+                        <em class="card__badge card__badge--edible">ÄTBART</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                    </section>
+                    <h3>Sallad</h3>
+                    <p>
+                        Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska
+                        måltider.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar11.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Grönis</p>
+                            <p>2024-12-06</p>
+                        </section>
+                    </footer>
+                </li>
+                <li class="card" role="article">
+                    <img src="images/card12.png" alt="Planting Icon" width="180">
+                    <section class="badges">
+                        <em class="card__badge card__badge--air">Luftfuktande</em>
+                        <em class="card__badge card__badge--green">GRÖNSKA</em>
+                        <em class="card__badge card__badge--decorative">dekorativ</em>
+                    </section>
+                    <h3>Ormbunke</h3>
+                    <p>
+                        En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
+                    </p>
+                    <footer class="avatar">
+                        <img src="images/avatar12.png" alt="Avatar" width="50" height="50">
+                        <section class="author">
+                            <p>Naturvännen</p>
+                            <p>2024-12-08</p>
+                        </section>
+                    </footer>
+                </li>
+            </ul>
+
+        </aside>
+        <article class="previousplanting">
+            <section>
+                <img src="images/icon-seedling.svg" alt="Planting Icon" width="170" height="170" class="circle">
+                <section>
+                    <h2>Våra tidigare odlingar</h2>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur
+                    deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor
+                    distinctio nam quaerat doloribus?
+                </section>
+                <em class="badge">Planterade plantor</em>
+            </section>
+        </article>
+        <footer class="pagefooter">
+            <section>
+                <a href="#">
+                    <img src="images/logo-white.svg" alt="Planned Planthood Logo" width="50" height="50">
+                    Planned Planthood
+                </a>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam
+                    alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum.
+                    lure, eius molestias?
+                    <em class="phone">Telefon: 020-1234567</em>
+                    <em class="mail">E-post: info@plannedplant.com</em>
+                </p>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                HEM
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                HISTORIK
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                TIPS
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                KONTAKT
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </section>
+
+        </footer>
+    </main>
+</body>
+
+</html>
