@@ -537,33 +537,6 @@ body {
   justify-content: center;
   grid-template-areas: var(--previous-planting-layout);
 
-  li:nth-child(1) {
-    /* grid-area: image;
-    margin-right: 3rem; */
-
-    /* em {
-      background-color: var(--clr-accent);
-      border-radius: 50%;
-      width: 200px;
-      height: 200px;
-      display: flex;
-      justify-content: center;
-      overflow: hidden;
-      padding: 1rem;
-      margin-left: 3rem;
-      flex-wrap: nowrap;
-      align-items: center;
-
-      img {
-        width: 80%;
-        height: 80%;
-        object-fit: contain;
-        padding-left: 5%;
-        padding-bottom: 10%;
-      }
-    } */
-  }
-
   li:nth-child(2) {
     grid-area: text;
     margin-top: 1rem;
