@@ -11,21 +11,20 @@
 
 <body>
     <main>
-        <header>
-            <nav class="top-navigation">
+        <header class="pageheader">
+            <a href="#">
+                <img src="images/logo.svg" alt="Planned Planthood Logo" width="50" height="50">
+                <p>Planned Planthood</p>
+            </a>
+
+            <nav>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <img src="images/logo.svg" alt="Planned Planthood Logo" width="50" height="50">
-                            Planned Planthood
-                        </a>
-                    </li>
                     <li>
                         <a href="#">
                             HEM
                         </a>
                     </li>
-                    <li>
+                    <li style="background-color: green; height: 200%;">
                         <a href="#">
                             HISTORIK
                         </a>
@@ -39,16 +38,22 @@
                         <a href="#">
                             KONTAKT
                         </a>
+                         <a href="#">
+                            <img src="images/burger-menu.svg" width="50" height="50">  
+                        </a>
                     </li>
                 </ul>
             </nav>
         </header>
+
         <article>
-            <header>
-                <h2>Upskattade växter</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Similique,corporis ipsum.</p>
+            <header class="prized-plants-text">
+                <h2>Uppskattade växter</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Similique,</p>
+                <p>corporis ipsum.</p>
             </header>
 
+        <aside class="content__wrapper--prized-plants-gallery">
             <ul class="prized-plants-gallery" role="list">
                 <li class="gallery-item">
                     <img src="images/bild1.png" alt="Planned Planthood Logo">
@@ -68,21 +73,28 @@
                 <li class="gallery-item">
                     <img src="images/bild6.png" alt="Planned Planthood Logo">
                 </li>
-
             </ul>
-
+        </aside>
         </article>
-        <!-- Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!
-        <img src="images/icon-planting.svg" alt="email Ikon" width="80" height="80" class="circle">
-        -->
-        <section class="newsletter">
-            <input type="email" placeholder="email@domain.com">
-            <button type="submit">Skicka</button>
-        </section>
-        <aside>
+
+        <ul class="newsletter" role="article">
+            <li>
+                <p>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</p>
+            </li>
+            <li>
+                <section>
+                    <input type="email" placeholder="email@domain.com">
+                    <button type="submit">Skicka</button>
+                </section>
+            </li>
+            <li>
+                <em><img src="images/icon-planting.svg" alt="email Ikon" width="200" height="200"></em>
+            </li>
+        </ul>
+        <aside class="content__wrapper--cards">
             <ul class="cards" role="list">
                 <!-- It appears we cannot use article inside a li element when flexing
-                so this is a workaround by setting role to li class directly
+                so this is a workaround by setting role to li element directly
                 and skip article element altogether ... -->
                 <li class="card" role="article">
                     <img src="images/card1.png" alt="Planting Icon">
@@ -343,23 +355,27 @@
             </ul>
 
         </aside>
-        <article class="previousplanting">
-            <section>
-                <img src="images/icon-seedling.svg" alt="Planting Icon" width="170" height="170" class="circle">
+        <ul class="previous-planting" role="article">
+            <li>
+                <em><img src="images/icon-seedling.svg" alt="Planting Icon" width="170" height="170"></em>
+            </li>
+            <li>
                 <section>
-                    <h2>Våra tidigare odlingar</h2>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur
-                    deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum, dolor
-                    distinctio nam quaerat doloribus?
+                    <p>Våra tidigare odlingar</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ratione quia eos pariatur
+                        deserunt veritatis. Tenetur, ipsum! Iusto delectus ipsam esse pariatur rerum eveniet nostrum,
+                        dolor
+                        distinctio nam quaerat doloribus?
+                    </p>
+                    <button class="card__badge">Planterade plantor</button>
                 </section>
-                <em class="badge">Planterade plantor</em>
-            </section>
-        </article>
+            </li>
+        </ul>
         <footer class="pagefooter">
             <section>
                 <a href="#">
                     <img src="images/logo-white.svg" alt="Planned Planthood Logo" width="50" height="50">
-                    Planned Planthood
+                    <p>Planned Planthood</p>
                 </a>
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam
@@ -368,31 +384,32 @@
                     <em class="phone">Telefon: 020-1234567</em>
                     <em class="mail">E-post: info@plannedplant.com</em>
                 </p>
-                <nav>
-                    <ul>
-                        <li>
-                            <a href="#">
-                                HEM
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                HISTORIK
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                TIPS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                KONTAKT
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
             </section>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">
+                            HEM
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            HISTORIK
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            TIPS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            KONTAKT
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
 
         </footer>
     </main>
