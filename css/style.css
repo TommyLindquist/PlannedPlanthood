@@ -131,6 +131,9 @@ main {
   --fw-semi-bold: var(--fw-600);
   --fw-bold: var(--fw-700);
   --fw-x-bold: var(--fw-900);
+
+  --newsletter-layout-shrink: "image""text""input";
+  --previous-planting-layout-shrink: "image""text";
 }
 
 /* Utilities */
@@ -185,13 +188,13 @@ body {
 .pageheader {
   display: grid;
   justify-content: space-around;
-  padding: 0.5rem 0;
   background-color: var(--clr-neutral-100);
   align-items: center;
   grid-template-areas:
     "section-logo-text nav-links";
 
   &>a {
+    padding: 0.5rem 0;
     display: grid;
     grid-template-columns: 1fr auto;
 
@@ -211,20 +214,25 @@ body {
   }
 
   nav {
-
+    align-self: stretch;
+    line-height: 3;
 
     ul {
       display: grid;
+
       grid-template-areas:
         "hem historik tips kontakt";
-      grid-template-columns: 1fr 1.4fr 1fr 1fr;
-      grid-area: nav-links;
+      grid-template-columns: 4rem 7rem 4rem 7rem;
+      height: 100%;
     }
 
     li {
       list-style: none;
+      text-align: center;
 
       a {
+        height: 100%;
+        display: block;
         font-size: var(--fs-500);
         font-weight: var(--fw-semi-bold);
 
@@ -233,18 +241,6 @@ body {
           background-color: var(--clr-accent);
         }
       }
-    }
-
-    li:nth-child(1) {
-      grid-area: hem;
-    }
-
-    li:nth-child(2) {
-      grid-area: historik;
-    }
-
-    li:nth-child(3) {
-      grid-area: tips;
     }
 
     li:nth-child(4) {
@@ -282,7 +278,6 @@ body {
 .content__wrapper--prized-plants-gallery,
 .content__wrapper--cards {
   max-width: 56.25rem;
-  /* 900 px */
   margin: 0 auto;
 }
 
@@ -295,7 +290,7 @@ body {
 
 .content__wrapper--cards {
   background-color: var(--clr-accent-light-1);
-/* Since media container can only measure its children, we activate container query here so we can make 
+  /* Since media container can only measure its children, we activate container query here so we can make 
    responsives cards by our given breakpoint ...*/
   container: card-grid / inline-size;
 }
@@ -343,12 +338,13 @@ body {
 }
 
 .newsletter {
+  --newsletter-layout:
+    "text image image"
+    "input image image";
   display: grid;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  grid-template-areas:
-    "text image image"
-    "input image image";
+  grid-template-areas: var(--newsletter-layout);
   list-style: none;
   background-color: var(--clr-neutral-100);
   justify-content: center;
@@ -398,7 +394,7 @@ body {
     font-weight: var(--fw-bold);
   }
 
-  section {
+  form {
     display: grid;
     grid-template-columns: 0.90fr auto;
     border: 2px solid var(--clr-neutral-300);
@@ -424,6 +420,8 @@ body {
     color: var(--clr-neutral-100);
     background-color: var(--clr-accent);
   }
+
+  container: newsletter-grid / inline-size;
 }
 
 .cards {
@@ -438,10 +436,9 @@ body {
 }
 
 .card {
- 
+
   padding: 1rem;
   box-shadow: var(--border-shadow);
-  /* background: white; */
   background-color: var(--clr-neutral-100);
 
   /* make sure we fill whole its space since not all images has equal physical sizes ...*/
@@ -453,7 +450,6 @@ body {
   }
 
   display: grid;
-  /* this card became grid in a grid */
   grid-template-rows: auto auto auto 1fr auto;
 
   :not(.badges > em, .avatar, .avatar *, .card) {
@@ -466,7 +462,7 @@ body {
     gap: 0.3rem;
   }
 
-  
+
 }
 
 .card__badge {
@@ -542,6 +538,7 @@ body {
 }
 
 .previous-planting {
+  --previous-planting-layout: "image text";
   display: grid;
   margin: 3rem 0;
   background-color: var(--clr-neutral-100);
@@ -549,8 +546,7 @@ body {
   padding: 3rem;
   justify-items: center;
   justify-content: center;
-  grid-template-areas:
-    "image text";
+  grid-template-areas: var(--previous-planting-layout);
 
   li:nth-child(1) {
     grid-area: image;
@@ -701,21 +697,30 @@ body {
       }
 
       li:nth-child(4) {
-        >:nth-child(1) { /*kontakt menu-item*/
+        >:nth-child(1) {
+          /*kontakt menu-item*/
           display: none;
         }
-        >:nth-child(2) { /*hamburger*/
+
+        >:nth-child(2) {
+          /*hamburger*/
           display: block;
         }
       }
     }
   }
+
+  .newsletter {
+    --newsletter-layout: var(--newsletter-layout-shrink);
+  }
+
+  .previous-planting {
+    --previous-planting-layout: var(--previous-planting-layout-shrink);
+  }
 }
 
 @container card-grid (width < 800px) {
-    .cards {
-
-     grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
-    }
-    
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  }
 }
