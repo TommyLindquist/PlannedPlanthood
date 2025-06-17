@@ -4,7 +4,8 @@
 <head>
     <title>Planned Planthood</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Denna sida beskriver våra populära odlingar, med erfarenhet från likasinnade odlingsantusiaster på ett och samma ställe.">
+    <meta name="description"
+        content="Denna sida beskriver våra populära odlingar, med erfarenhet från likasinnade odlingsantusiaster på ett och samma ställe.">
     <link rel="stylesheet" href="css/style.css">
     <meta charset="UTF-8">
 </head>
@@ -12,33 +13,33 @@
 <body>
     <main>
         <header class="pageheader">
-            <a href="#">
+            <a class="pageheader__logo" href="#">
                 <img src="images/logo.svg" width="50" height="50">
-                <p>Planned Planthood</p>
+                <p class="logo__text">Planned Planthood</p>
             </a>
 
-            <nav>
-                <ul>
-                    <li>
-                        <a href="#">
+            <nav class="pageheader__nav">
+                <ul class="pageheader__grid">
+                    <li class="nav__menu">
+                        <a class="menu__link" href="#">
                             HEM
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="nav__menu">
+                        <a class="menu__link" href="#">
                             HISTORIK
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="nav__menu">
+                        <a class="menu__link" href="#">
                             TIPS
                         </a>
                     </li>
-                    <li>
-                        <a href="#">
+                    <li class="nav__menu hamburger__menu">
+                        <a class="menu__link menu__link" href="#">
                             KONTAKT
                         </a>
-                        <a href="#">
+                        <a class="hamburger__link" href="#">
                             <img src="images/burger-menu.svg" width="50" height="50">
                         </a>
                     </li>
@@ -47,59 +48,63 @@
         </header>
 
         <article>
-            <header class="prized-plants-text" alt="Ett kollage med bilder på våra uppskattade växter">
+            <header class="prized-plants__header" alt="Ett kollage med bilder på våra uppskattade växter">
                 <h2>Uppskattade växter</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Similique,</p>
                 <p>corporis ipsum.</p>
             </header>
 
-            <aside class="content__wrapper--prized-plants-gallery">
-                <ul class="prized-plants-gallery" role="list">
-                    <li class="gallery-item">
-                        <img src="images/bild1.png" alt="Bild på utblommad maskros">
+            <div class="content__wrapper prized-plants__gallery">
+                <ul class="prized-plants__grid" role="list">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild1.png" alt="Bild på utblommad maskros">
                     </li>
-                    <li class="gallery-item">
-                        <img src="images/bild2.png" alt="Bild på två stycken hallon">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild2.png" alt="Bild på två stycken hallon">
                     </li>
-                    <li class="gallery-item">
-                        <img src="images/bild3.png" alt="Bild på kaktus">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild3.png" alt="Bild på kaktus">
                     </li>
-                    <li class="gallery-item">
-                        <img src="images/bild4.png" alt="Bild på en lila blomma">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild4.png" alt="Bild på en lila blomma">
                     </li>
-                    <li class="gallery-item">
-                        <img src="images/bild5.png" alt="Bild med grön blomma tillsamans med grön växtlighet omkring">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild5.png"
+                            alt="Bild med grön blomma tillsamans med grön växtlighet omkring">
                     </li>
-                    <li class="gallery-item">
-                        <img src="images/bild6.png" alt="Bild på blomma med röda nyanser och lite gulare i mitten">
+                    <li>
+                        <img class="prized-plants__image" src="images/bild6.png"
+                            alt="Bild på blomma med röda nyanser och lite gulare i mitten">
                     </li>
                 </ul>
-            </aside>
+            </div>
         </article>
 
         <ul class="newsletter" role="article">
             <li>
-                <p>Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</p>
+                <header class="newsletter__header">Anmäl dig till vårt nyhetsbrev så du inte missar en utsådd!</header>
             </li>
             <li>
-                <form>
-                    <input type="email" id="email" name="email" placeholder="email@domain.com" required>
-                    <button type="submit" id="submit" name="submit">Skicka</button>
+                <form class="form">
+                    <input class="form__input" type="email" id="email" name="email" placeholder="email@domain.com"
+                        required>
+                    <button class="form__button" type="submit" id="submit" name="submit">Skicka</button>
                 </form>
             </li>
             <li>
-                <em><img src="images/icon-planting.svg" alt="email Ikon" width="200" height="200"></em>
+                <em class="newsletter__logo"><img src="images/icon-planting.svg" width="200" height="200"></em>
             </li>
         </ul>
-        <aside class="content__wrapper--cards">
+
+        <div class="content__wrapper content-wrapper__cards">
             <ul class="cards" role="list">
                 <!-- It appears we cannot use article inside a li element when flexing
                 so this is a workaround by setting role to li element directly
                 and skip article element altogether ... -->
                 <li class="card" role="article">
-                    <img src="images/card1.png">
+                    <img class="card__image" src="images/card1.png">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--flower">BLOMMOR</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
@@ -111,7 +116,7 @@
                         vattning,
                         omplacering, duschning och gödsling.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar1.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Coolio</p>
@@ -120,9 +125,9 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card2.png" width="180">
+                    <img class="card__image" src="images/card2.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
                         <em class="card__badge card__badge--easy">LÄTTODLAT</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
@@ -133,7 +138,7 @@
                         En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under
                         sommaren.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar2.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Anna Odlare</p>
@@ -143,9 +148,9 @@
                 </li>
 
                 <li class="card" role="article">
-                    <img src="images/card3.png" width="180">
+                    <img class="card__image" src="images/card3.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--decorative">dekorativ</em>
                         <em class="card__badge card__badge--colorful">färgstark</em>
                         <em class="card__badge card__badge--robust">tålig</em>
@@ -156,7 +161,7 @@
                     <p>
                         En vacker och lättskött blomma som trivs både inne och ute under sommaren.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar3.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Blomsterkalle</p>
@@ -166,9 +171,9 @@
 
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card4.png" width="180">
+                    <img class="card__image" src="images/card4.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge">kryddor</em>
                         <em class="card__badge card__badge--fragrant">doftande</em>
                         <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
@@ -178,7 +183,7 @@
                     <p>
                         En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar4.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Krydd-Malin</p>
@@ -188,9 +193,9 @@
                 </li>
 
                 <li class="card" role="article">
-                    <img src="images/card5.png" width="180">
+                    <img class="card__image" src="images/card5.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--fast">Snabbväxande</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
@@ -201,7 +206,7 @@
                         Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska
                         måltider.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar5.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Grönis</p>
@@ -210,9 +215,9 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card6.png" width="180">
+                    <img class="card__image" src="images/card6.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--air">Luftfuktande</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
                         <em class="card__badge card__badge--decorative">dekorativ</em>
@@ -222,7 +227,7 @@
                     <p>
                         En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar6.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Naturvännen</p>
@@ -231,9 +236,9 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card7.png" width="180">
+                    <img class="card__image" src="images/card7.png" width="180">
 
-                    <section class="badges" alt="Utmärkelser">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--flower">BLOMMOR</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
@@ -245,7 +250,7 @@
                         vattning,
                         omplacering, duschning och gödsling.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar7.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Coolio</p>
@@ -254,8 +259,8 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card8.png" width="180">
-                    <section class="badges" alt="Utmärkelser">
+                    <img class="card__image" src="images/card8.png" width="180">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
                         <em class="card__badge card__badge--easy">LÄTTODLAT</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
@@ -265,7 +270,7 @@
                         En perfekt grönsak att odla på balkongen eller i trädgården. Ger riklig skörd under
                         sommaren.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar8.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Anna Odlare</p>
@@ -274,8 +279,8 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card9.png" width="180">
-                    <section class="badges" alt="Utmärkelser">
+                    <img class="card__image" src="images/card9.png" width="180">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--decorative">dekorativ</em>
                         <em class="card__badge card__badge--colorful">färgstark</em>
                         <em class="card__badge card__badge--robust">tålig</em>
@@ -285,7 +290,7 @@
                     <p>
                         En vacker och lättskött blomma som trivs både inne och ute under sommaren.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar9.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Blomsterkalle</p>
@@ -294,8 +299,8 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card10.png" width="180">
-                    <section class="badges" alt="Utmärkelser">
+                    <img class="card__image" src="images/card10.png" width="180">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge">kryddor</em>
                         <em class="card__badge card__badge--fragrant">doftande</em>
                         <em class="card__badge card__badge--sunloving">SOLÄLSKANDE</em>
@@ -304,7 +309,7 @@
                     <p>
                         En fantastisk krydda för pastarätter och sallader. Trivs bäst i ett soligt fönster.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar10.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Krydd-Malin</p>
@@ -314,8 +319,8 @@
 
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card11.png" width="180">
-                    <section class="badges"  alt="Utmärkelser">
+                    <img class="card__image" src="images/card11.png" width="180">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--fast">Snabbväxande</em>
                         <em class="card__badge card__badge--edible">ÄTBART</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
@@ -325,7 +330,7 @@
                         Sallad är en av de enklaste grönsakerna att odla och ger snabba resultat för färska
                         måltider.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar11.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Grönis</p>
@@ -334,8 +339,8 @@
                     </footer>
                 </li>
                 <li class="card" role="article">
-                    <img src="images/card12.png" width="180">
-                    <section class="badges" alt="Utmärkelser">
+                    <img class="card__image" src="images/card12.png" width="180">
+                    <section class="card__badges" alt="Utmärkelser">
                         <em class="card__badge card__badge--air">Luftfuktande</em>
                         <em class="card__badge card__badge--green">GRÖNSKA</em>
                         <em class="card__badge card__badge--decorative">dekorativ</em>
@@ -344,7 +349,7 @@
                     <p>
                         En klassisk växt som passar perfekt i badrummet eller på skuggiga platser.
                     </p>
-                    <footer class="avatar">
+                    <footer class="card__avatar">
                         <img src="images/avatar12.png" width="50" height="50">
                         <section class="author" alt="Författad av medlem">
                             <p>Naturvännen</p>
@@ -354,9 +359,10 @@
                 </li>
             </ul>
 
-        </aside>
+        </div>
+
         <ul class="previous-planting" role="article">
-            <li>
+            <li class="previous-planting__logo">
                 <em><img src="images/icon-seedling.svg" width="170" height="170"></em>
             </li>
             <li>
@@ -371,13 +377,13 @@
                 </section>
             </li>
         </ul>
-        <footer class="pagefooter">
-            <section>
-                <a href="#">
+        <footer class="pagefooter pagefooter--color">
+            <section class="pagefooter__left-column">
+                <a class="left-column__logo" href="#">
                     <img src="images/logo-white.svg" width="50" height="50">
                     <p>Planned Planthood</p>
                 </a>
-                <p>
+                <p class="pagefooter__text--width">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque, veniam ducimus aut sint atque ullam
                     alias perspiciatis fuga. Consequuntur nesciunt ea corrupti aperiam fugit inventore ratione earum.
                     lure, eius molestias?
@@ -385,7 +391,7 @@
                     <em class="mail">E-post: info@plannedplant.com</em>
                 </p>
             </section>
-            <nav>
+            <nav class="pagefooter__menu">
                 <ul>
                     <li>
                         <a href="#">
@@ -409,7 +415,6 @@
                     </li>
                 </ul>
             </nav>
-
 
         </footer>
     </main>
