@@ -98,6 +98,7 @@ main {
   --clr-fast: hsl(218, 11%, 34%);
 
   --border-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --border-shadow-clr-accent: 0 1px 3px var(--clr-accent), 0 1px 2px var(--clr-accent);
 
   --font-base: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 
@@ -220,7 +221,7 @@ body {
 
   grid-template-areas:
     "hem historik tips kontakt";
-  grid-template-columns: 4rem 7rem 4rem 7rem;
+  grid-template-columns: repeat(2, 4rem 7rem);
   height: 100%;
 }
 
@@ -368,7 +369,7 @@ body {
 .form {
   display: grid;
   grid-template-columns: 0.90fr auto;
-  border: 2px solid var(--clr-neutral-300);
+  border: 0.125rem solid var(--clr-neutral-300);
   border-radius: 2.5rem;
   margin-right: 1rem;
 }
@@ -384,19 +385,27 @@ body {
 
 .form__button {
   padding: 0.25rem 0.8rem;
-  border: 2px solid var(--clr-neutral-100);
+  border: 0.125rem solid var(--clr-neutral-100);
   border-radius: 2.5rem;
   font-size: var(--fs-200);
   text-transform: uppercase;
   color: var(--clr-neutral-100);
   background-color: var(--clr-accent);
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-primary-light-1);
+    color: var(--clr-accent);
+    box-shadow: var(--border-shadow-clr-accent);
+  }
 }
 
 .newsletter__logo {
   background-color: var(--clr-accent);
   border-radius: 50%;
-  width: 220px;
-  height: 220px;
+  width: 13.175rem;
+  height: 13.175rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -561,19 +570,28 @@ body {
         font-weight: var(--fw-regular);
         margin-top: 0.5rem;
       }
-
-      button {
-        margin-top: 1rem;
-        align-self: flex-end;
-        justify-self: right;
-        border: none;
-        padding: 0.5rem 1rem;
-        text-transform: unset;
-        font-size: var(--fs-300);
-        font-weight: unset;
-      }
     }
   }
+}
+
+.card__badge--button {
+
+  &:hover,
+  &:focus-visible {
+    background-color: var(--clr-primary-light-1);
+    color: var(--clr-accent);
+    box-shadow: var(--border-shadow-clr-accent);
+  }
+
+  margin-top: 1rem;
+  align-self: flex-end;
+  justify-self: right;
+  border: none;
+  padding: 0.5rem 1rem;
+  text-transform: unset;
+  font-size: var(--fs-300);
+  font-weight: unset;
+  cursor: pointer;
 }
 
 .previous-planting__logo {
@@ -584,8 +602,8 @@ body {
 .previous-planting__logo em {
   background-color: var(--clr-accent);
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -647,7 +665,6 @@ body {
 
 .pagefooter--color * {
   color: var(--clr-neutral-100);
-
 }
 
 .pagefooter__menu {
@@ -660,24 +677,24 @@ body {
   }
 }
 
-.phone {
-  background-image: url(../images/icon-phone.svg);
-}
-
-.mail {
-  background-image: url(../images/icon-email.svg);
-}
-
 .mail, .phone {
   display: block;
   background-repeat: no-repeat;
   padding-left: 1.5rem;
-  font-weight: bold;
+  font-weight: var(--fw-bold);
   margin: 1.3rem 0;
   line-height: 1;
 }
 
-@media(width < 780px) {
+.phone--icon {
+  background-image: url(../images/icon-phone.svg);
+}
+
+.mail--icon {
+  background-image: url(../images/icon-email.svg);
+}
+
+@media(width < 48.75rem) {
   .pageheader {
     nav {
       li:not(:nth-child(4)) {
@@ -706,13 +723,41 @@ body {
     --previous-planting-layout: var(--previous-planting-layout-shrink);
   }
 
+  .prized-plants__gallery {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
   .pagefooter nav {
     display: none;
   }
 }
 
-@container card-grid (width < 780px) {
+@media (width < 41.6875rem) {
+  .content__wrapper {
+    min-width: 500px;
+  }
+
+  .prized-plants__gallery {
+    padding: 1.5rem;
+  }
+
+  .prized-plants__grid {
+    grid-template-areas:
+      "a b""c d""e f";
+
+    img {
+      width: 308px;
+      height: 200px;
+    }
+  }
+
+}
+
+@container card-grid (width < 48.75rem) {
   .cards {
     grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
 }
